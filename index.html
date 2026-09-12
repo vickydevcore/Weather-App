@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vicky Weather — Modern Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">Vicky<span>Weather</span></div>
+        <div class="badge">LIVE WEATHER • API POWERED</div>
+      </nav>
+
+      <div class="searchbar">
+        <input
+          id="cityInput"
+          placeholder="Search city — e.g. Amritsar, Delhi, Mumbai"
+          value="Amritsar"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+      <div class="location" id="location">Loading weather...</div>
+      <div class="error" id="error"></div>
+
+      <section class="grid">
+        <article class="card hero">
+          <div class="topline">
+            <div>
+              <div class="day" id="day">—</div>
+              <div class="date" id="date">—</div>
+            </div>
+            <div class="badge" id="status">● LIVE</div>
+          </div>
+          <div class="weather-main">
+            <div class="icon" id="icon">🌤️</div>
+            <div>
+              <div class="temp" id="temp">--<span class="unit">°C</span></div>
+              <div class="condition" id="condition">—</div>
+              <div class="feels" id="feels">Feels like —</div>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat">
+              <span>💧 Humidity</span><b id="humidity">—</b>
+            </div>
+            <div class="stat"><span>💨 Wind</span><b id="wind">—</b></div>
+            <div class="stat">
+              <span>🌡️ Pressure</span><b id="pressure">—</b>
+            </div>
+            <div class="stat">
+              <span>👁️ Visibility</span><b id="visibility">—</b>
+            </div>
+          </div>
+        </article>
+
+        <aside class="card side">
+          <h3>☀️ Sun & Air</h3>
+          <div class="sun">
+            <div>🌅<strong id="sunrise">—</strong><small>Sunrise</small></div>
+            <div>🌇<strong id="sunset">—</strong><small>Sunset</small></div>
+          </div>
+          <div style="margin-top: 26px">
+            <h3>UV Index</h3>
+            <strong id="uv" style="font-size: 27px">—</strong>
+            <div class="progress"><i id="uvbar"></i></div>
+            <small
+              style="color: var(--muted); display: block; margin-top: 8px"
+              id="uvtext"
+              >—</small
+            >
+          </div>
+          <div style="margin-top: 27px">
+            <h3>Today's Range</h3>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 14px;
+              "
+            >
+              <b id="high">—</b
+              ><span style="color: var(--muted)" id="low">—</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card forecast">
+        <div class="forecast-head">
+          <h2>5-Day Forecast</h2>
+          <span>Updated automatically</span>
+        </div>
+        <div class="days" id="days"></div>
+      </section>
+
+      <div class="footer">
+        Built with HTML • Advanced CSS • JavaScript • Open-Meteo API
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
